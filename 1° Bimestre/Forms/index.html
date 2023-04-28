@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+</head>
+
+  <body>
+    <form>
+      <fieldset>
+        <legend>Questionário</legend>
+
+          <fieldset>
+            <legend>Cadastro</legend>
+        
+            <label for="email">E-mail:</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"/> 
+            
+            <br/><br/>
+
+            <label for="senha">Senha:</label>
+            <input 
+              type="password" 
+              id="passwd" 
+              name="passwd"/>
+          </fieldset>
+
+        <fieldset>
+          <legend>Dados pessoais:</legend>
+
+          <label for="name">Nome:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="nome"/> 
+
+          <br/><br/>
+
+          <label for="age">Idade:</label>
+          <input 
+            type="number" 
+            id="age" 
+            name="idade"/> 
+
+          <br/><br/>
+
+          <label for="tele">Telefone:</label>
+          <input 
+            type="tel" 
+            id="tele" 
+            name="telef"/> 
+
+          <br/><br/>
+
+          <label for="birthdate">Data de nascimento:</label>
+          <input 
+            type="date" 
+            id="birthdate" 
+            name="birthdate"/> 
+
+          <br/><br/>
+
+          <label for="gender">Gênero: </label>
+
+          <input 
+            type="radio" 
+            id="masc" 
+            name="sex"/>
+
+          <label for="masc">
+						Masculino
+					</label>
+
+          <input 
+            type="radio" 
+            id="fem" 
+            name="sex"/>
+          <label for="fem">
+						Feminino
+					</label>
+
+          <input 
+            type="radio" 
+            id="other" 
+            name="sex"/>
+          <label for="other">
+						Outros
+					</label>
+
+          <input 
+            type="radio" 
+            id="not" 
+            name="sex"/>
+          <label for="not">
+						Prefiro não responder
+					</label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências:</legend>
+
+          <label for="manufacturer">
+						Marca de celular que você usa:
+					</label>
+
+          <select id="manufacturer" name="manufacturer">
+            <option value="samsung">Samsung</option>
+            <option value="apple">Apple</option>
+            <option value="motorola">Motorola</option>
+            <option value="xiaomi">Xiaomi</option>
+          </select>
+
+          <br/><br/>
+
+          <label for="browser">
+						Escolha o navegador que você usa:
+					</label>
+
+          <input 
+            type="text" 
+            id="browser" 
+            name="browser" 
+            list="browsers"/>
+
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+          </datalist>
+
+          <br/><br/>
+
+          <label for="genre">
+						Escolha os ritmos musicais que você escuta:
+					</label>
+
+          <input 
+            type="checkbox" 
+            id="rock" 
+            name="genre" 
+            value="rock"/>
+          <label for="rock">Rock</label>
+
+          <input 
+            type="checkbox" 
+            id="funk" 
+            name="genre" 
+            value="funk"/>
+          <label for="funk">Funk</label>
+
+          <input 
+            type="checkbox" 
+            id="pop" 
+            name="genre" 
+            value="pop"/>
+          <label for="rock">Pop</label>
+
+          <input 
+            type="checkbox" 
+            id="mpb" 
+            name="genre" 
+            value="mpb"/>
+          <label for="rock">MPB</label>
+
+          <input 
+            type="checkbox" 
+            id="blues" 
+            name="genre" 
+            value="blues"/>
+          <label for="blues">Blues</label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Comentário:</legend>
+
+          <textarea rows="4" cols="50" placeholder="Digite um comentário!"></textarea>
+
+        </fieldset>
+        
+        <br>
+
+        <input type="reset" value="Limpar"/>
+        <input type="submit" value="Enviar"/>
+
+      </fieldset>
+      
+    </form>
+
+  </body>
+	
+</html>
