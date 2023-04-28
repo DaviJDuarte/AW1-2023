@@ -1,0 +1,191 @@
+@keyframes rgbAnimation{
+	0% {border-color: red;}
+	33% {border-color: green;}
+	66% {border-color: blue;}
+	100% {border-color: red;}
+}
+
+@keyframes colorChange{
+	0% {color: red;}
+	33% {color: green;}
+	66% {color: blue;}
+	100% {color: red;}
+
+}
+
+
+body{
+    border: red solid 3px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:40px;
+    margin-bottom:0px;
+		padding-bottom: 20px;
+		animation: rgbAnimation 4s infinite;
+}
+
+p{
+    display: inline-block;
+}
+
+.profile-header{
+  display: flex;
+  align-items: top;
+	padding-bottom: 1%;
+}
+
+
+.profile-header-image
+{
+    width: 170px;
+
+}
+
+.profile-image{
+    margin-left: 20px;
+    margin-top: 20px;
+		box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.20);
+}
+
+.name-text{
+display: inline-block;
+height: 100px;
+width: 800px;
+}
+
+.nome{
+  font-size: 30px;
+	font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+  width: 150%;
+  height: 15%;
+	animation: colorChange 4s infinite;
+}
+
+
+.position{
+  margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	opacity: 0.8;
+}
+
+.about-me{
+	margin-left: 40px;
+	width: 80%;
+}
+
+.line-break{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.title{
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+.section{
+	display: flex;
+	margin-bottom: 30px;
+}
+
+
+
+.full-div{
+	width: 100%;
+}
+
+
+
+.text-description{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+	opacity: 0.8;
+}
+
+
+.main-img{
+	max-height: 80%;
+	max-width: 80%;
+	margin-top: 40px;
+	margin-left: 80px;
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.20);
+}
+
+.main-video{
+	margin-left: 120px;
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.20);
+}
+
+.aditional{
+	margin-left: 20px;
+}
+
+
+.left-contacts, .right-contacts, .contact-icon, .contact-stuff{
+	display: inline-block;
+	width: 40%;
+}
+
+.icon{
+	width:35px;
+	vertical-align: top;
+	
+}
+
+.contact-info{
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.contact-section{
+	margin-bottom: 30px;
+}
+
+.contact-icon{
+	width: 50px;
+	vertical-align: top;
+}
+
+.contact-stuff{
+	vertical-align: top;
+}
+
+.contact-type, .contact-value{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.contact-type{
+	font-weight: bold;
+	display: block;
+}
+
+.contact-value{
+	margin-top: 10px;
+	opacity: 0.8;
+	display: block;
+}
+
+iframe{
+	height: 250px;
+	width: 400px;
+	margin-right: 30px;
+	margin-left: 100px;
+}
+
+.right-contacts{
+	margin-right: 30px;
+}
+
+.audio{
+	margin-top: 20px;
+
+}
