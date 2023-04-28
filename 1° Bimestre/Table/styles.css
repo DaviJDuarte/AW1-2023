@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+    text-align: left;
+}
+
+.table-footer{
+    text-align: center; 
+    vertical-align: top; 
+    height: 50px; 
+}
