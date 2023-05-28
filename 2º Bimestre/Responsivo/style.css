@@ -98,7 +98,8 @@ img:hover{
     
     .nav-item:hover {
         background: rgba(0,0,0,0.15);
-        transform: scale(1.1);    
+        transform: scale(1.1);
+        box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     }
 
     h1{
@@ -119,6 +120,7 @@ img:hover{
         width: 90%;
         background-image: linear-gradient(to bottom right, rgba(53, 53, 53, 0.5), rgba(95, 95, 95, 0.5));
         backdrop-filter: blur(20px);
+        box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
         left: 0;
         top: 10%;
         transition: .6s;
@@ -136,9 +138,10 @@ img:hover{
     }
 
     .nav-item:hover {
-        background: rgba(115, 115, 115, 0.795);
+        background: rgba(115, 115, 115, 0.4);
         transform: scale(1);
         cursor: pointer;
+        box-shadow: 0.4rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
     }
 
     nav .navbar-toggler {
