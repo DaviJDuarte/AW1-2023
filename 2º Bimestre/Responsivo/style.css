@@ -79,7 +79,6 @@ h1:hover {
 
 }
 
-
 .car-img{
     align-self: center;
     transition: all 0.3s ease
@@ -88,12 +87,6 @@ h1:hover {
 img:hover{
     transform: scale(1.02);
 }
-
-
-
-
-
-
 
 @media (min-width: 601px){
     nav .nav-list .nav-item {
@@ -124,10 +117,6 @@ img:hover{
 
 
 }
-
-
-
-
 
 @media (max-width: 600px) {
     nav .nav-list{
