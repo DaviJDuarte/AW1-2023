@@ -84,7 +84,7 @@ img:hover{
     transform: scale(1.02);
 }
 
-@media (min-width: 601px){
+@media screen and (min-width: 601px){
     nav .nav-list .nav-item {
         cursor: pointer;
         height: 100%;
@@ -112,7 +112,7 @@ img:hover{
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     nav .nav-list{
         display: grid;
         visibility: hidden;
@@ -160,7 +160,7 @@ img:hover{
         width: 40px;
         height: 4px;
         margin-bottom: 10px;
-        background: #ffffff;
+        background: #f1f1f1;
         border-radius: 10%;
         transition: .4s;
     }
