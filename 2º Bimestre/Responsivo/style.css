@@ -97,6 +97,12 @@ img:hover{
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
+.nav-item:active{
+    background: rgba(54, 76, 109, 0.4);
+    cursor: grabbing;
+
+}
+
 @media screen and (max-width: 600px) {
     nav .nav-list{
         display: grid;
@@ -128,12 +134,6 @@ img:hover{
         transform: scale(1);
         cursor: pointer;
         box-shadow: 0.4rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-item:active{
-        background: rgba(54, 76, 109, 0.4);
-        cursor: grabbing;
-
     }
 
     nav .navbar-toggler {
