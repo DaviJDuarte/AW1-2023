@@ -8,7 +8,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html, body{
+html,
+body {
     background-image: linear-gradient(to bottom right, rgb(0, 31, 63), rgb(30, 30, 30));
     height: 110%;
     width: 100%;
@@ -16,7 +17,7 @@ html, body{
 
 input {
     display: none;
-} 
+}
 
 nav {
     display: flex;
@@ -34,7 +35,7 @@ nav .navbar-brand {
     letter-spacing: .1vw;
 }
 
-.navbar-brand{
+.navbar-brand {
     margin-right: 1vw;
 }
 
@@ -48,79 +49,80 @@ nav .nav-list .nav-link {
     font-weight: 500;
 }
 
-#main-text-div{
+#main-text-div {
     margin-top: 5ch;
     justify-content: center;
     width: 100vw;
 }
 
 h1 {
-  font-weight: 500;
-  text-align: center;
-  width: 100%;
-  color: transparent;
-  text-shadow: 0 0.6vw 1.8vw rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(to bottom right, #fff, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: all 0.3s ease
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    text-shadow: 0 0.6vw 1.8vw rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to bottom right, #fff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 h1:hover {
     transform: scale(1.1);
 }
 
-#main-img{
+#main-img {
     margin: 5% 10%;
     display: flex;
     justify-content: center;
-    gap:10vw
+    gap: 10vw
 }
 
-.car-img{
+.car-img {
     align-self: center;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.02);
 }
 
-.nav-item{
+.nav-item {
     border-radius: 3vw;
 }
 
 .nav-item:hover {
-
     background: rgba(124, 124, 124, 0.204);
     transform: scale(1.1);
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
-.nav-item:active{
+.nav-item:active {
     background: rgba(54, 76, 109, 0.4);
     cursor: grabbing;
 }
 
 @media screen and (max-width: 600px) {
-    nav .nav-list{
+    nav .nav-list {
         display: grid;
         visibility: hidden;
         opacity: 0;
-        position: absolute;
-        width: 90%;
+        position: fixed;
+        left: 5vw;
+        right: 5vw;
         background-image: linear-gradient(to bottom right, rgba(53, 53, 53, 0.5), rgba(95, 95, 95, 0.5));
         backdrop-filter: blur(20px);
         box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
-        left: 0;
         top: 10%;
         transition: .6s;
         border-radius: 4vw;
-        margin: 4vw 5%;
-        z-index: 1;
+        margin: 4vw 0;
+        z-index: 2;
     }
 
-    .nav-item{
+    .nav-item {
         padding: 4vw 8%;
         margin: 0 0;
         width: 84%;
@@ -135,9 +137,8 @@ img:hover{
         box-shadow: 0.4rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
     }
 
-    .nav-item:active{
+    .nav-item:active {
         background: rgba(54, 76, 109, 0.4);
-        cursor: grabbing;
     }
 
     nav .navbar-toggler {
@@ -150,7 +151,7 @@ img:hover{
         margin: 18px -10px 0 0;
         cursor: pointer;
     }
-    
+
     nav .navbar-toggler .bar {
         width: 40px;
         height: 4px;
@@ -159,89 +160,89 @@ img:hover{
         border-radius: 10%;
         transition: .4s;
     }
-    
+
     input {
         display: none;
     }
-    
-    input:checked ~ nav .nav-list {
+
+    input:checked~nav .nav-list {
         visibility: visible;
         opacity: 1;
     }
 
-    input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+    input:checked~nav .navbar-toggler .bar:nth-child(1) {
         position: absolute;
         transform: rotate(45deg);
     }
-    
-    input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
+
+    input:checked~nav .navbar-toggler .bar:nth-child(2) {
         display: none;
     }
-    
-    input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
-        transform: rotate(-45deg);
-    } 
 
-    h1{
+    input:checked~nav .navbar-toggler .bar:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    h1 {
         font-size: 2.5ch;
         margin: 10% 0;
     }
 
-    #main-img{
+    #main-img {
         flex-direction: column;
     }
 
-    img{
+    img {
         width: 50vw;
     }
 
-    #car-img2{
+    #car-img2 {
         width: 55vw;
-    }  
+    }
 }
 
-@media screen and (min-width:601px) and (max-width: 900px){
-    nav{
+@media screen and (min-width:601px) and (max-width: 900px) {
+    nav {
         max-width: 70%;
-    }  
-    
-    .nav-list{
+    }
+
+    .nav-list {
         font-size: 80%;
         gap: 1vw;
     }
 
-    .nav-item{
+    .nav-item {
         padding: 3% 5%;
         transition: .4s;
         cursor: pointer;
     }
-   
-    h1{
+
+    h1 {
         font-size: 180%;
     }
 
-    .car-img{
+    .car-img {
         width: 35vw;
     }
 }
 
-@media screen and (min-width: 901px){
+@media screen and (min-width: 901px) {
     nav .nav-list .nav-item {
         cursor: pointer;
         height: 100%;
         margin: 0 2vw;
         transition: .4s;
     }
-    
-    .nav-item{
+
+    .nav-item {
         padding: 1.3vw 2vw 1.3vw 2vw;
     }
-    
-    h1{
+
+    h1 {
         font-size: 200%;
     }
 
-    .car-img{
+    .car-img {
         width: 25vw;
     }
 }
