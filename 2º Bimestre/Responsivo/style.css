@@ -115,7 +115,7 @@ img:hover {
         right: 5vw;
         background-image: linear-gradient(to bottom right, rgba(53, 53, 53, 0.5), rgba(95, 95, 95, 0.5));
         backdrop-filter: blur(20px);
-        box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
         top: 10%;
         transition: .6s;
         border-radius: 4vw;
@@ -164,6 +164,11 @@ img:hover {
 
     input {
         display: none;
+    }
+
+    input:checked~main {
+        transition: all .5s;
+        filter: brightness(30%);
     }
 
     input:checked~nav .nav-list {
