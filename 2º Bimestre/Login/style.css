@@ -149,6 +149,8 @@ button {
     border: 2px white solid;
     cursor: pointer;
     transition: all .2s;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
 }
 
 button:hover {
