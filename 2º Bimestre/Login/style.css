@@ -1,41 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
-*{
-    font-family: Montserrat, sans-serif;
+* {
+    font-family: 'SF Pro Display', sans-serif;
+    color: white;
 }
 
-body{
-    background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+body {
+    background: linear-gradient(308deg, #ffa600, #9d0064, #120067);
+    background-size: 600% 600%;
+    animation: AnimationName 9s ease infinite;
     margin: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main{
-    background-color: black;
-    width: 98vw;
-    height: 98vh;
-    top: 1vh;
-    position: relative;
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+main {
+    display: flex;
+    background-color: rgba(163, 163, 163, 0.378);
+    backdrop-filter: blur(100px);
+    width: 94vw;
+    height: 92vh;
+    margin: 4vh 3vw;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.left,
+.right {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3%;
 }
 
-div{
-    display:flex;
+.left,
+form {
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+img {
+    width: 50%;
+}
+
+form {
+    display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.173);
+    border-radius: 20px;
+    padding: 0 5% 5% 5%;
+    width: 24vw;
+    height: fit-content;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
 }
 
-h1{
-    color: red;
+.name {
+    font-size: 2em;
+    font-weight: bold;
+    align-self: center;
 }
 
-#login{
-    height: 1vh;
-    width: 5vw;
-    border-radius: 0.7vw;
-    background-color: blueviolet;
+label {
+    font-size: 1.3em;
+    margin-bottom: 1vh;
+    margin-left: 10px;
+}
+
+input {
+    color: white;
+    padding: 5%;
+    margin-bottom: 6vh;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(154, 152, 152, 0.378);
+    box-shadow: 0 0 5px rgba(255, 255, 255, .2);
+    transition: all .2s;
+}
+
+input::placeholder {
+    font-size: 1.5em;
+}
+
+input:hover {
+    filter: brightness(170%);
+}
+
+button {
+    font-size: 1.6em;
+    font-weight: bold;
+    width: 40%;
+    align-self: center;
+    padding: 10px;
+    background: transparent;
+    background-size: 600% 600%;
+    animation: AnimationName 9s ease infinite;
+    border-radius: 20px;
+    border: 2px white solid;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    color: black;
+    background: white;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+
+    form {
+        width: 70vw;
+    }
 }
