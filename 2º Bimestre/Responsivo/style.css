@@ -105,6 +105,7 @@ img:hover {
 }
 
 @media screen and (max-width: 600px) {
+
     nav .nav-list {
         display: grid;
         visibility: hidden;
@@ -148,7 +149,7 @@ img:hover {
     nav .navbar-toggler {
         display: none;
         height: min-content;
-        margin: 18px -10px 0 0;
+        margin: 10px -10px 0 0;
         cursor: pointer;
     }
 
