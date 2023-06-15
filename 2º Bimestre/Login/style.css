@@ -6,9 +6,9 @@
 }
 
 body {
-    background: linear-gradient(308deg, #ffa600, #9d0064, #120067);
-    background-size: 600% 600%;
-    animation: AnimationName 9s ease infinite;
+    background: linear-gradient(45deg, #ffa600, #9d0064, #120067);
+    background-size: 300% 300%;
+    animation: Gradient 9s ease infinite;
     margin: 0;
     height: 100%;
     display: flex;
@@ -16,35 +16,7 @@ body {
     align-items: center;
 }
 
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes AnimationName {
+@keyframes Gradient {
     0% {
         background-position: 0% 50%
     }
@@ -66,7 +38,7 @@ main {
     height: 92vh;
     margin: 4vh 3vw;
     border-radius: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
 }
 
 .left,
@@ -123,8 +95,8 @@ input {
     width: 90%;
     border-radius: 20px;
     border: none;
-    background-color: rgba(154, 152, 152, 0.378);
-    box-shadow: 0 0 5px rgba(255, 255, 255, .2);
+    background-color: rgba(154, 152, 152, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all .2s;
 }
 
@@ -142,9 +114,9 @@ button {
     width: 40%;
     align-self: center;
     padding: 10px;
-    background: transparent;
+    background: linear-gradient(45deg, #ffa600, #9d0064, #120067);
     background-size: 600% 600%;
-    animation: AnimationName 9s ease infinite;
+    animation: Gradient 9s ease infinite;
     border-radius: 20px;
     border: 2px white solid;
     cursor: pointer;
