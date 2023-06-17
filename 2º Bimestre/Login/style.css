@@ -6,8 +6,8 @@
 }
 
 body {
-    background: linear-gradient(45deg, #ffa600, #9d0064, #120067);
-    background-size: 300% 300%;
+    background: linear-gradient(-45deg, #ffa600, #9d0064, #120067);
+    background-size: 200% 200%;
     animation: Gradient 9s ease infinite;
     margin: 0;
     height: 100%;
@@ -62,6 +62,13 @@ form {
 
 img {
     width: 50%;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+img:hover {
+    transform: translateY(-1%);
+
 }
 
 form {
@@ -114,7 +121,7 @@ button {
     width: 40%;
     align-self: center;
     padding: 10px;
-    background: linear-gradient(45deg, #ffa600, #9d0064, #120067);
+    background: linear-gradient(-45deg, #ffa600, #9d0064, #120067);
     background-size: 600% 600%;
     animation: Gradient 9s ease infinite;
     border-radius: 20px;
