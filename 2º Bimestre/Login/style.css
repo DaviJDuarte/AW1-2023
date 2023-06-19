@@ -7,7 +7,7 @@
 
 body {
     background: linear-gradient(-45deg, #ffa600, #9d0064, #120067);
-    background-size: 200% 200%;
+    background-size: 600% 600%;
     animation: Gradient 9s ease infinite;
     margin: 0;
     height: 100%;
@@ -140,9 +140,17 @@ button:hover {
 @media screen and (max-width: 600px) {
     main {
         flex-direction: column;
+        height: fit-content;
+    }
+
+    div{
+        height: fit-content;
     }
 
     form {
         width: 70vw;
+        height: fit-content;
+        margin-top: 10%;
+        margin-bottom: 15%;
     }
 }
