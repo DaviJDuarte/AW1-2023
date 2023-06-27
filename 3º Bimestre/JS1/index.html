@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+
+<body>
+    <script>
+        document.body.style.background = "lightblue";
+
+        var nome = "Davi"
+        var idade = 17
+        alert("Meu nome é " + nome)
+        alert("Tenho " + idade + " anos")
+
+        try {
+            var numero1 = Number(prompt("Digite um número: "))
+            var numero2 = Number(prompt("Digite outro número: "))
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                throw new Error();
+            }
+
+            alert("O primeiro número é: " + numero1)
+            alert("O segundo número é: " + numero2)
+
+            var resultado = numero1 + numero2
+            alert(numero1 + " + " + numero2 + " é igual à: " + resultado)
+        }
+        catch (err) {
+            alert("Digite apenas NUMEROS!!!")
+        }
+
+        var numero3 = Number(13);
+        var numero4 = Number(22);
+
+        var numeros = String(numero3) + String(numero4)
+        alert(numeros);
+
+        var nome2 = prompt("Digite seu nome: ")
+        var idade2 = Number(prompt("Digite sua idade"))
+
+        document.write("Seu nome é: " + nome2)
+        document.write("<br>Sua idade é: " + idade2 + " anos")
+
+        document.write("<br><br>Seu nome tem: " + nome2.length + " letras")
+        document.write("<br>Seu nome em minúsculo: " + nome2.toLowerCase())
+        document.write("<br>Seu nome em maiúsculo é: " + nome2.toUpperCase())
+
+
+        document.write(`<br><br><br><br>Seu nome é: ${nome2}`)
+        document.write(`<br>Sua idade é: ${idade2} anos`)
+
+        document.write(`<br><br>Seu nome tem: ${nome2.length} letras`)
+        document.write(`<br>Seu nome em minúsculo: ${nome2.toLowerCase()}`)
+        document.write(`<br>Seu nome em maiúsculo é: ${nome2.toUpperCase()}`)
+    </script>
+</body>
+
+</html>
