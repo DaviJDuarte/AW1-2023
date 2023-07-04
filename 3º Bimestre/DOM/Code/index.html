@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade DOM</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 onclick="mudar_de_novo()">
+      Taylor Swift Albums
+    </h1>
+  </header>
+  <main>
+    <section class="albums">
+      <div class="album-grid">
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/Taylor_Swift.png" alt="Taylor Swift">
+          <p>Taylor Swift (2006)</p>
+        </div>
+
+        <div class="album " onclick="mudar()">
+          <img id="fearless-cover" src="covers/Fearless.png" alt="Fearless">
+          <p>Fearless (2008)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img name="speak-now" src="covers/Speak_Now.jpg" alt="Speak Now">
+          <p>Speak Now (2010)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/Red.webp" alt="Red">
+          <p>Red (2012)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/1989.jpg" alt="1989">
+          <p>1989 (2014)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/reputation.jpg" alt="reputation">
+          <p>reputation (2017)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/Lover.webp" alt="Lover">
+          <p>Lover (2019)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/folklore.webp" alt="folklore">
+          <p>folklore (2020)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/evermore.jpeg" alt="Evermore">
+          <p>Evermore (2020)</p>
+        </div>
+
+        <div class="album" onclick="mudar()">
+          <img src="covers/Midnights.jpeg" alt="Midnights">
+          <p>Midnights (2022)</p>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

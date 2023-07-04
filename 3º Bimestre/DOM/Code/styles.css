@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, plum, lightblue);
+  font-family: 'Roboto', sans-serif;
+  padding-top: 30px;
+  background-image: url(background.jpeg);
+  background-size: 100%;
+}
+
+header {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
+}
+
+main {
+  cursor: pointer;
+}
+
+p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.albums {
+  display: flex;
+  justify-content: center;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 10px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.album {
+  background-color: rgba(0, 0, 0, .2);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  transition: all .2s;
+}
+
+.album:hover {
+  transform: translateY(-5px);
+}
