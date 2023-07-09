@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+* {
+  transition: all .2s;
+}
+
 body {
   height: 100vh;
   width: 100%;
@@ -8,6 +12,7 @@ body {
   padding-top: 30px;
   background-image: url(background.jpeg);
   background-size: 100%;
+  color: white;
 }
 
 header {
@@ -28,13 +33,16 @@ p {
 }
 
 .albums {
+  position: fixed;
   display: flex;
+  left: 20vw;
+  right: 20vw;
   justify-content: center;
 }
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(5, 150px);
+  grid-template-columns: repeat(5, 10vw);
   gap: 10px;
   background-color: rgba(255, 255, 255, .2);
   backdrop-filter: blur(20px);
@@ -51,7 +59,6 @@ img {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  transition: all .2s;
 }
 
 .album:hover {
