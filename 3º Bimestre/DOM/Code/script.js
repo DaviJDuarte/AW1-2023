@@ -1,17 +1,48 @@
-function mudar() {
-  document.getElementsByTagName("body")[0].style.color = 'white';
-  document.getElementsByTagName("body")[0].style.filter = 'brightness(70%)';
-  
-  document.getElementById("fearless-cover").style.transform = "rotate(180deg)";
-  document.getElementById("fearless-cover").style.filter = "blur(2px)";
+const albumDiv = document.getElementsByClassName('album');
 
-  document.querySelector("img#fearless-cover").style.margin = "5px";
-  document.querySelector("img#fearless-cover").style.border = "10px solid pink"
-
-  document.getElementsByClassName("album")[0].style.background = "rgba(0, 0, 0, .2";
-  document.getElementsByClassName("album")[0].style.padding = "3px";
-
-  document.getElementsByName("speak-now")[0].style.transform = "rotate(90deg)";
-  document.getElementsByName("speak-now")[0].style.filter = "blur(1px)";
+for (let i = 0; i < albumDiv.length; i++) {
+  albumDiv[i].addEventListener('click', change);
 }
 
+function change() {
+  const bodyStyle = document.getElementsByTagName('body')[0].style;
+  const fearlessCoverStyle = document.getElementById('fearless-cover').style;
+  const albumDivsStyle = document.querySelector('.albums .album').style;
+  const thirdAlbumDivStyle = document.getElementsByClassName('album')[3].style;
+  const speakNowCoverStyle = document.getElementsByName('speak-now')[0].style;
+
+  if (bodyStyle.color === 'black') {
+    bodyStyle.color = 'white';
+    bodyStyle.filter = 'none';
+
+    fearlessCoverStyle.transform = 'none';
+    fearlessCoverStyle.filter = 'none';
+
+    albumDivsStyle.filter = 'none';
+    albumDivsStyle['font-family'] = "'Roboto', sans-serif";
+
+    thirdAlbumDivStyle.padding = '0';
+    thirdAlbumDivStyle['background-color'] = 'rgba(0, 0, 0, .2)';
+
+    speakNowCoverStyle.transform = 'none';
+
+    this.style.border = 'none'
+  } else {
+    bodyStyle.color = 'black';
+    bodyStyle.filter = 'brightness(70%)';
+
+    fearlessCoverStyle.transform = 'rotate(180deg)';
+    fearlessCoverStyle.filter = 'blur(2px)';
+
+    albumDivsStyle.filter = 'blur(1px)';
+    albumDivsStyle['font-family'] = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+
+    thirdAlbumDivStyle.padding = '20px';
+    thirdAlbumDivStyle['background-color'] = 'rgba(255, 0, 0, .4)';
+
+    speakNowCoverStyle.transform = 'skewX(15deg)';
+    speakNowCoverStyle.transform += 'scale(.7)';
+
+    this.style.border = '10px solid red'
+  }
+}
