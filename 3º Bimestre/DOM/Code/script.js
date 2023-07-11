@@ -1,3 +1,71 @@
+const albums = [
+  {
+    name: 'Taylor Swift',
+    year: 2006,
+    cover: 'Taylor_Swift.png'
+  },
+  {
+    name: 'Fearless',
+    year: 2008,
+    cover: 'Fearless.png'
+  },
+  {
+    name: 'Speak Now',
+    year: 2010,
+    cover: 'Speak_Now.jpg'
+  },
+  {
+    name: 'Red',
+    year: 2012,
+    cover: 'Red.webp'
+  },
+  {
+    name: '1989',
+    year: 2014,
+    cover: '1989.jpg'
+  },
+  {
+    name: 'reputation',
+    year: 2017,
+    cover: 'reputation.jpg'
+  },
+  {
+    name: 'Lover',
+    year: 2019,
+    cover: 'Lover.webp'
+  },
+  {
+    name: 'folklore',
+    year: 2020,
+    cover: 'folklore.webp'
+  },
+  {
+    name: 'Evermore',
+    year: 2020,
+    cover: 'evermore.jpeg'
+  },
+  {
+    name: 'Midnights',
+    year: 2022,
+    cover: 'Midnights.jpeg'
+  }
+];
+
+renderAlbums();
+
+function renderAlbums() {
+  albumGridElement = document.querySelector('.js-albums-grid');
+
+  for (let i = 0; i < albums.length; i++) {
+    albumGridElement.innerHTML += `
+    <div class="album">
+      <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${albums[i].cover}" alt="${albums[i].name}">
+      <p>${albums[i].name} (${albums[i].year})</p>
+    </div>
+    `
+  }
+}
+
 const albumDiv = document.getElementsByClassName('album');
 
 for (let i = 0; i < albumDiv.length; i++) {
@@ -6,10 +74,10 @@ for (let i = 0; i < albumDiv.length; i++) {
 
 function change() {
   const bodyStyle = document.getElementsByTagName('body')[0].style;
-  const fearlessCoverStyle = document.getElementById('fearless-cover').style;
+  const fearlessCoverStyle = document.getElementById('js-album-cover-1').style;
   const albumDivsStyle = document.querySelector('.albums .album').style;
   const thirdAlbumDivStyle = document.getElementsByClassName('album')[3].style;
-  const speakNowCoverStyle = document.getElementsByName('speak-now')[0].style;
+  const speakNowCoverStyle = document.getElementsByName('js-album-cover-2')[0].style;
 
   if (bodyStyle.color === 'black') {
     bodyStyle.color = 'white';
