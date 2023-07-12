@@ -55,16 +55,14 @@ renderAlbums();
 
 function renderAlbums() {
   albumGridElement = document.querySelector('.js-albums-grid');
-  let i = 0;
 
-  albums.forEach(function (album) {
+  albums.forEach(function (album, i) {
     albumGridElement.innerHTML += `
     <div class="album">
       <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
       <p>${album.name} (${album.year})</p>
     </div>
     `;
-    i++;
   });
 }
 
