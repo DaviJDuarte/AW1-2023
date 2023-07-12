@@ -66,11 +66,11 @@ function renderAlbums() {
   });
 }
 
-const albumDiv = document.getElementsByClassName('album');
+const albumDivElements = document.getElementsByClassName('album');
 
-for (let i = 0; i < albumDiv.length; i++) {
-  albumDiv[i].addEventListener('click', change);
-}
+Array.from(albumDivElements).forEach(function (albumDivElement) {
+  albumDivElement.addEventListener('click', change);
+});
 
 function change() {
   const bodyStyle = document.getElementsByTagName('body')[0].style;
