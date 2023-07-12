@@ -55,15 +55,17 @@ renderAlbums();
 
 function renderAlbums() {
   albumGridElement = document.querySelector('.js-albums-grid');
+  let i = 0;
 
-  for (let i = 0; i < albums.length; i++) {
+  albums.forEach(function (album) {
     albumGridElement.innerHTML += `
     <div class="album">
-      <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${albums[i].cover}" alt="${albums[i].name}">
-      <p>${albums[i].name} (${albums[i].year})</p>
+      <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
+      <p>${album.name} (${album.year})</p>
     </div>
-    `
-  }
+    `;
+    i++;
+  });
 }
 
 const albumDiv = document.getElementsByClassName('album');
