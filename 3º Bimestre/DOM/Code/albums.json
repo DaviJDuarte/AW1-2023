@@ -1,0 +1,54 @@
+{
+    "albums": [
+        {
+            "name": "Taylor Swift",
+            "year": 2006,
+            "cover": "Taylor_Swift.png"
+        },
+        {
+            "name": "Fearless",
+            "year": 2008,
+            "cover": "Fearless.png"
+        },
+        {
+            "name": "Speak Now",
+            "year": 2010,
+            "cover": "Speak_Now.jpg"
+        },
+        {
+            "name": "Red",
+            "year": 2012,
+            "cover": "Red.webp"
+        },
+        {
+            "name": "1989",
+            "year": 2014,
+            "cover": "1989.jpg"
+        },
+        {
+            "name": "reputation",
+            "year": 2017,
+            "cover": "reputation.jpg"
+        },
+        {
+            "name": "Lover",
+            "year": 2019,
+            "cover": "Lover.webp"
+        },
+        {
+            "name": "folklore",
+            "year": 2020,
+            "cover": "folklore.webp"
+        },
+        {
+            "name": "Evermore",
+            "year": 2020,
+            "cover": "evermore.jpeg"
+        },
+        {
+            "name": "Midnights",
+            "year": 2022,
+            "cover": "Midnights.jpeg"
+        }
+    ]
+}

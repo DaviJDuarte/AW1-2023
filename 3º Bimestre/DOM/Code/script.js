@@ -1,79 +1,43 @@
-const albums = [
-  {
-    name: 'Taylor Swift',
-    year: 2006,
-    cover: 'Taylor_Swift.png'
-  },
-  {
-    name: 'Fearless',
-    year: 2008,
-    cover: 'Fearless.png'
-  },
-  {
-    name: 'Speak Now',
-    year: 2010,
-    cover: 'Speak_Now.jpg'
-  },
-  {
-    name: 'Red',
-    year: 2012,
-    cover: 'Red.webp'
-  },
-  {
-    name: '1989',
-    year: 2014,
-    cover: '1989.jpg'
-  },
-  {
-    name: 'reputation',
-    year: 2017,
-    cover: 'reputation.jpg'
-  },
-  {
-    name: 'Lover',
-    year: 2019,
-    cover: 'Lover.webp'
-  },
-  {
-    name: 'folklore',
-    year: 2020,
-    cover: 'folklore.webp'
-  },
-  {
-    name: 'Evermore',
-    year: 2020,
-    cover: 'evermore.jpeg'
-  },
-  {
-    name: 'Midnights',
-    year: 2022,
-    cover: 'Midnights.jpeg'
+async function fetchAlbums() {
+  try {
+    const response = await fetch('albums.json');
+    if (!response.ok) {
+      throw new Error('Error fetching JSON: ' + response.status);
+    }
+    const data = await response.json();
+    return data.albums;
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
   }
-];
-
-renderAlbums();
-
-function renderAlbums() {
-  albumGridElement = document.querySelector('.js-albums-grid');
-
-  albums.forEach((album, i) => {
-    albumGridElement.innerHTML += `
-    <div class="album">
-      <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
-      <p>${album.name} (${album.year})</p>
-    </div>
-    `;
-  });
 }
 
-const albumDivElements = document.getElementsByClassName('album');
+async function renderAlbums() {
+  try {
+    const albumsData = await fetchAlbums();
+    const albumGridElement = document.querySelector('.js-albums-grid');
 
-Array.from(albumDivElements).forEach(albumDivElement => albumDivElement.addEventListener('click', change));
+    albumsData.forEach((album, i) => {
+      albumGridElement.innerHTML += `
+      <div class="album">
+        <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
+        <p>${album.name} (${album.year})</p>
+      </div>
+      `;
+    });
+
+    const albumDivElements = document.querySelectorAll('.album');
+    albumDivElements.forEach(albumDivElement => albumDivElement.addEventListener('click', change));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+renderAlbums();
 
 function change() {
   const bodyStyle = document.getElementsByTagName('body')[0].style;
   const fearlessCoverStyle = document.getElementById('js-album-cover-1').style;
-  const albumDivsStyle = document.querySelector('.albums .album').style;
+  const albumDivsStyle = document.querySelector('.album').style;
   const thirdAlbumDivStyle = document.getElementsByClassName('album')[3].style;
   const speakNowCoverStyle = document.getElementsByName('js-album-cover-2')[0].style;
 
@@ -92,7 +56,7 @@ function change() {
 
     speakNowCoverStyle.transform = 'none';
 
-    this.style.border = 'none'
+    this.style.border = 'none';
   } else {
     bodyStyle.color = 'black';
     bodyStyle.filter = 'brightness(70%)';
@@ -109,6 +73,6 @@ function change() {
     speakNowCoverStyle.transform = 'skewX(15deg)';
     speakNowCoverStyle.transform += 'scale(.7)';
 
-    this.style.border = '10px solid red'
+    this.style.border = '10px solid red';
   }
 }
