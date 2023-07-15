@@ -56,7 +56,7 @@ renderAlbums();
 function renderAlbums() {
   albumGridElement = document.querySelector('.js-albums-grid');
 
-  albums.forEach(function (album, i) {
+  albums.forEach((album, i) => {
     albumGridElement.innerHTML += `
     <div class="album">
       <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
@@ -68,9 +68,7 @@ function renderAlbums() {
 
 const albumDivElements = document.getElementsByClassName('album');
 
-Array.from(albumDivElements).forEach(function (albumDivElement) {
-  albumDivElement.addEventListener('click', change);
-});
+Array.from(albumDivElements).forEach(albumDivElement => albumDivElement.addEventListener('click', change));
 
 function change() {
   const bodyStyle = document.getElementsByTagName('body')[0].style;
