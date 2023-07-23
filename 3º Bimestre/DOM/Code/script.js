@@ -39,7 +39,7 @@ function change() {
   const fearlessCoverStyle = document.getElementById('js-album-cover-1').style;
   const albumDivsStyle = document.querySelector('.album').style;
   const thirdAlbumDivStyle = document.getElementsByClassName('album')[3].style;
-  const speakNowCoverStyle = document.querySelector('[data-album-name="Speak Now"] > img').style;
+  const speakNowCoverStyle = document.getElementsByName('js-album-cover-2')[0].style;
 
   if (bodyStyle.color === 'black') {
     bodyStyle.color = 'white';
