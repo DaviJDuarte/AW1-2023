@@ -18,7 +18,7 @@ async function renderAlbums() {
 
     albumsData.forEach((album, i) => {
       albumGridElement.innerHTML += `
-      <div class="album">
+      <div class="album" data-album-name="${album.name}">
         <img name="js-album-cover-${i}" id="js-album-cover-${i}" src="covers/${album.cover}" alt="${album.name}">
         <p>${album.name} (${album.year})</p>
       </div>
@@ -39,7 +39,7 @@ function change() {
   const fearlessCoverStyle = document.getElementById('js-album-cover-1').style;
   const albumDivsStyle = document.querySelector('.album').style;
   const thirdAlbumDivStyle = document.getElementsByClassName('album')[3].style;
-  const speakNowCoverStyle = document.getElementsByName('js-album-cover-2')[0].style;
+  const speakNowCoverStyle = document.querySelector('[data-album-name="Speak Now"] > img').style;
 
   if (bodyStyle.color === 'black') {
     bodyStyle.color = 'white';
