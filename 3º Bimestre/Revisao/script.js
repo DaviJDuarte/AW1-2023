@@ -1,3 +1,6 @@
+const body = document.body;
+
+// Create person class
 class Person {
   constructor(name, age, portugueseGrade, mathGrade, wdGrade) {
     this.name = name;
@@ -7,12 +10,14 @@ class Person {
     this.wdGrade = wdGrade; // Web Development == wd
   }
 
+  // Calculate overall score
   calcularMedia() {
     const numberOfSubjects = 3;
 
     return ((this.portugueseGrade + this.mathGrade + this.wdGrade) / numberOfSubjects).toFixed(2);
   }
 
+  //Calculate what age the user will be on the year they input. Must have their age
   calcularIdade(ano) {
     const currentYear = Number(new Date().getFullYear());
 
@@ -20,6 +25,7 @@ class Person {
   }
 }
 
+// Create a single instance of the person class. Use prompts to get the values for each attribute
 let person = new Person(
   prompt('Qual o seu nome?'),
   Number(prompt('Qual sua idade?')),
@@ -28,8 +34,10 @@ let person = new Person(
   Number(prompt('Qual foi sua nota em Desenvolvimento WEB?'))
 );
 
+// Needed for calculating age in a future year
 let futureYear = Number(prompt('Digite um ano futuro para saber sua idade:'));
 
+// Get the numbers for the grid at the bottom of the page
 function getNumbers() {
   let numbers;
   do {
@@ -48,7 +56,8 @@ function getNumbers() {
   return HTMLString;
 }
 
-document.body.innerHTML = `
+//Creating the page structure using by changing the content of the InnerHTML of the body 
+body.innerHTML = `
 <section>
   <header>
   <div class="info">
@@ -100,12 +109,23 @@ let userColor = prompt('Qual sua cor favorita? (em inglês):');
 const colorVariableCSS = document.querySelector(':root').style;
 colorVariableCSS.setProperty('--color', userColor);
 
+// There is text inside containers using a color that can change. The function below calculates what color will contrast better with the background, to make the text as readable as possible.
+function parseColor(colorName) {
+  const tempElem = document.createElement("div");
+  tempElem.style.color = colorName;
+  document.body.appendChild(tempElem);
+  const rgbColor = getComputedStyle(tempElem).color;
+  document.body.removeChild(tempElem);
+  return rgbColor;
+}
+
 function getTextColor(backgroundColor) {
-  const r = parseInt(backgroundColor.slice(1, 3), 16);
-  const g = parseInt(backgroundColor.slice(3, 5), 16);
-  const b = parseInt(backgroundColor.slice(5, 7), 16);
+  backgroundColor = parseColor(backgroundColor);
+  const r = parseInt(backgroundColor.slice(4, 7));
+  const g = parseInt(backgroundColor.slice(9, 12));
+  const b = parseInt(backgroundColor.slice(14, 17));
   const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-  return brightness > 128 ? "black" : "white";
+  return brightness >= 128 ? "black" : "white";
 }
 
 const textColor = getTextColor(userColor);
@@ -121,8 +141,7 @@ footer.addEventListener('click', () => {
   }
 })
 
-const body = document.body;
-
+// I was just bored...
 body.addEventListener('keypress', (event) => {
   if (event.key === 'i') {
     if (body.classList.contains('show-igor')) {
