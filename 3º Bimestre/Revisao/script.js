@@ -56,7 +56,7 @@ function getNumbers() {
   return HTMLString;
 }
 
-//Creating the page structure using by changing the content of the InnerHTML of the body 
+//Creating the page structure by changing the content of the body's InnerHTML
 body.innerHTML = `
 <section>
   <header>
